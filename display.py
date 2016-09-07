@@ -3,3 +3,10 @@ class Display():
 		print("\n")
 		for task in tasks:
 			print(task)
+		
+
+
+		
+
+
+
