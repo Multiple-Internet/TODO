@@ -3,7 +3,7 @@ class Display():
 		print("\n")
 		index = 1
 		for task in tasks:
-			print(str(index) + ": " + task)
+			print(str(index) + ": " + task.title + " " + str(task.complete))
 			index += 1
 		
 

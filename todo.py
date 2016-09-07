@@ -55,7 +55,9 @@ def add_tasks_menu():
 		menu_selection = get_menu_selection(ADD_MENU)
 
 		if menu_selection == "1":
-			my_task_list.add_task(input("What task would you like to add? \n >"))
+			my_task_title = input("What task would you like to add? \n >")
+			my_task = Task(my_task_title)
+			my_task_list.add_task(my_task)
 		elif menu_selection == "0":
 			break
 		else:
@@ -81,7 +83,7 @@ def complete_task():
 			displays.display_tasks(my_task_list.my_list)
 			complete_answer = int(input("What number would you like to mark as complete? \n >")) - 1
 			my_task_list.my_list[complete_answer].complete = True
-			print(my_task_list.my_list)
+			displays.display_tasks(my_task_list.my_list)
 		elif menu_selection == "0":
 			break
 		else:
