@@ -1,5 +1,6 @@
 from sys import exit
 
+### Defines Main Menu
 class TODO():
 	MAIN_MENU = (
 		"1: Display Tasks",
@@ -8,15 +9,35 @@ class TODO():
 		"4: Remove Tasks",
 		"0: Exit Program",
 	)
+	#BEGIN DICTIONARY
+
+	data = {'task' : 'time'}
+
+	
+	ADD_MENU = (
+		"1: Add a New Task",
+		"0: Return to Main Menu",
+		)
+
+
+	def add_tasks(self):
+		while True:
+			menu_selection = self.get_menu_selection(self.MAIN_MENU)
+
+			if menu_selection == "1":
+				pass
+			###### making menu navigation
+
+
 
 	def main_menu(self):
 		while True:
-			menu_selection = get_menu_selection(self.MAIN_MENU)
+			menu_selection = self.get_menu_selection(self.MAIN_MENU)
 
 			if menu_selection == "1":
 				pass
 			elif menu_selection == "2":
-				pass
+				self.add_tasks()
 			elif menu_selection == "3":
 				pass
 			elif menu_selection == "4":
